@@ -48,7 +48,7 @@ void merge_ranges(int *values, int startIndex, int midPoint, int endIndex) {
   for (int i = 0; i < rangeSize; i++) {
     values[i + startIndex] = destination[i];
   }
-  free(destination);
+  free(destination); //frees up the memory to get rid of memory leaks
 }
 
 bool needs_sorting(int rangeSize) {
