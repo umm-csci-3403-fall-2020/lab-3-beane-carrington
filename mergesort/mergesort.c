@@ -4,14 +4,14 @@
 
 #include "mergesort.h"
 
-void mergesort(int size, int values*) {
+void mergesort(int size, int *values) {
   mergesort_range(values, 0, size);
   return;
 }
 
 void mergesort_range(int *values, int startIndex, int endIndex) {
   int rangeSize = endIndex - startIndex;
-  if (needsSorting(rangeSize)){
+  if (needs_sorting(rangeSize)){
     int midPoint = (startIndex + endIndex) / 2;
     mergesort_range(values, startIndex, midPoint);
     mergesort_range(values, midPoint, endIndex);
