@@ -36,9 +36,9 @@ void merge_ranges(int *values, int startIndex, int midPoint, int endIndex) {
     copyIndex++;
   }
   while (firstIndex < midPoint) {
-    destination[copyIndex] = values[secondIndex];
+    destination[copyIndex] = values[firstIndex];
     copyIndex++;
-    secondIndex++;
+    firstIndex++;
   }
   while (secondIndex < endIndex) {
     destination[copyIndex] = values[secondIndex];
@@ -48,6 +48,7 @@ void merge_ranges(int *values, int startIndex, int midPoint, int endIndex) {
   for (int i = 0; i < rangeSize; i++) {
     values[i + startIndex] = destination[i];
   }
+  free(destination);
 }
 
 bool needs_sorting(int rangeSize) {
