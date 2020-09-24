@@ -1,4 +1,5 @@
 #include "mergesort.h"
+#include "mergesort.c"
 #include "array_merge.h"
 #include <stdio.h>
 #include <stdbool.h>
