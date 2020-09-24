@@ -216,6 +216,9 @@ your results. With a little care, you can put all the unique values in an unsort
 array, and then ask your sorting algorithm to sort the desired bit of
 the array without messing with that important first element.
 
+To compile:
+`g++ -Wall -g -o array_test array_merge.c array_merge_test.cpp -lgtest -pthread -std=c++0x`
+
 ## Final Words
 
 Be sure that:
